@@ -1,0 +1,96 @@
+﻿title: Start
+---
+<<declare $giveTheScrewdriver = false>>
+Narrator: You are an astronaut crashed on Mars. 
+Narrator: With your crew you managed to survive and build a station on Mars where you can live for a while. 
+Narrator: You and your crew can't wait to leave this damn planet.
+Narrator: You hope that this is the day that you will leave this place.
+Narrator: Now go to request a status report from the orange crewmate.
+// <<give_item "Player" "Screwdriver1">>
+// <<give_item "Player" "CircuitBoard1">>
+
+===
+
+title: OrangeCrewmate
+---
+<<if $giveTheScrewdriver == false && not has_item("Player","Screwdriver_item")>>
+You: Status report.
+
+Orange Crewmate: Yes, captain!
+
+
+Orange Crewmate: There is a huge sandstorm outside of our station.
+
+Orange Crewmate: The rocket is 99,9% done.
+// <<set_enabled_in_unity "OrangeGuyTalking" true>>
+// <<set_enabled_in_unity "OrangeGuyTalking" false>>
+Orange Crewmate: If we don't leave now there is a huge possibility that our rocket will fall down and extend our stay with about 4-5 months.
+
+Orange Crewmate: All we need is to fix this circuit board on my desk and we are ready.
+
+Orange Crewmate: There is a problem. I left my screwdriver near the rocket launchpad. 
+
+You: Don't worry. I will go there and take your tool.
+Orange Crewmate: But please be carefull. Mind your oxygen.
+
+<<elseif has_item("Player","Screwdriver_item") && $giveTheScrewdriver == false>>
+<<set $giveTheScrewdriver = true>>
+<<take_item "Player" "Screwdriver_item">>
+Orange Crewmate: Great! Thanks.
+
+Orange Crewmate: Oh no. My bad. This is the wrong type of screwdriver.
+
+Orange Crewmate: I left the other one in the toolbox in the other station. You know the one that is located directly straight from the door.
+
+You: Ok. I will get it. 
+Orange Crewmate: Hey also one small reminder. There is an O2 tank in the other station. Could be usefull.
+
+<<elseif has_item("Player", "Toolbox1")>>
+<<take_item "Player" "Toolbox1">>
+Orange Crewmate: Thanks. But there is other problem now. 
+
+Orange Crewmate: I can't fix the circuit board. I need new one.
+
+Orange Crewmate: Luckily for us there is one functoning circuit board on the nose of the old crashed rocket located left of the hatch.
+
+Orange Crewmate: Use this screwdriver to get it.
+
+<<give_item "Player" "Screwdriver_item">>
+You: Ok. Let's hope this is the last task.
+<<elseif has_item("Player", "CircuitBoard1")>>
+Orange Crewmate: Finally!!! 
+
+Orange Crewmate: That's it.
+
+Orange Crewmate: We can leave now!!!
+
+<<set_enabled_in_unity "WinScreen" true>>
+//<<disable_controls "Player">>
+<<endif>>
+===
+
+title: Toolbox
+---
+<<wait 0.1>>
+<<set_enabled_in_unity "Toolbox" false>>
+===
+
+title: CircuitBoard
+---
+<<wait 0.1>>
+<<set_enabled_in_unity "CircuitBoard" false>>
+===
+
+title: Screwdriver
+---
+<<wait 0.1>>
+<<set_enabled_in_unity "Screwdriver" false>>
+===
+
+title: OxygenTank
+---
+
+Tip: Press R to fill half of your oxygen tank.(use in emergency)
+<<wait 0.1>>
+<<set_enabled_in_unity "OxygenTank" false>>
+===

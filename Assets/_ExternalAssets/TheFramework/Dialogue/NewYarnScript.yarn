@@ -1,0 +1,36 @@
+﻿title: Start1
+---
+Narrator:Hello
+<<declare $something = false>>
+<<if $something == false>>
+->Кво става?
+    <<jump kvoStava>>
+->Maznaaaaaa
+    <<jump mazna>>
+<<else>>
+Mark:Maznaaaaa
+<<endif>>
+===
+
+title: kvoStava
+---
+Vesko: Kur kapan
+<<set $something = true>>
+===
+
+title:mazna
+---
+Misho: Bate kys
+<<set $something = true>>
+===
+
+title:W1
+---
+<<if $something == false>>
+->Кво става?
+    <<jump kvoStava>>
+->Maznaaaaaa
+    <<jump mazna>>
+
+<<endif>>
+===
