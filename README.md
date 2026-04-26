@@ -1,19 +1,12 @@
-# TheOneFramework
+# Mars Rescue
 
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/b0cec982-0a87-4351-ac8f-25f8bcdb1448">
+You and your crew are almost ready to leave Mars. Unfortunately, one of the circuit boards broke, and you, as the captain, need to collect all the parts before the strong winds of Mars destroy your rocket. 
 
-This framework was made for the course Design Fundamentals on CMGT Saxion.
-It provides scripts for player-object interaction and offers YarnSpinner integration.
-You need to install git before you load the project because installing YarnSpinner depends on it.
+This is one of my first games that I have made in Unity, and the teachers graded it as one of the best projects from the 1st semester and later as one of the best games from 1st year students in my studies. 
 
-This link will show a WebGL-based demonstration:
-https://bramsgames.itch.io/design-fundamentals-framework-demonstration
+https://youtu.be/dv-EohM7TD0?si=xgiecvX5iCSXpD6x&t=49 <br>
+https://youtu.be/oHqUXEvqLxo?si=tbxuNIxOnvdujCFL
 
-Follow this link to the documentation:
-https://github.com/YvensFaos/TheOneFramework/blob/main/Doc/Framework%20documentation.pdf
+This game is made using TheOneFramework from Saxion.
 
-For questions, please visit our Discord server:
-https://discord.gg/DFnnuuHQ2P
-
-Follow this link for the beta version of the OneFramework GPT-Assistant:
-https://chatgpt.com/g/g-BxFTLFvLT-design-fundamentals
+https://github.com/YvensFaos/TheOneFramework/
